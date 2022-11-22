@@ -16,7 +16,7 @@ class RepositoryModule {
 
     @Singleton
     @Provides
-    fun provideNewsRepository(
+    fun provideDataRepository(
         remoteDatasource: RemoteDatasource,
         localDatasource: LocalDatasource
     ): DataRepository {

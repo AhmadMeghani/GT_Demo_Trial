@@ -6,5 +6,4 @@ import kotlinx.coroutines.flow.Flow
 
 class GetChannelsUseCase(private val dataRepository: DataRepository) {
     fun execute(): Flow<List<Channel>> = dataRepository.getChannels()
-
 }

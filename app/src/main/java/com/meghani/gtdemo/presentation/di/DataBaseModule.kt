@@ -15,7 +15,7 @@ import javax.inject.Singleton
 class DataBaseModule {
     @Singleton
     @Provides
-    fun provideNewsDatabase(app: Application): AppDatabase {
+    fun provideAppDatabase(app: Application): AppDatabase {
         return Room.databaseBuilder(app, AppDatabase::class.java, "app_db")
 //            .allowMainThreadQueries()
             .build()
@@ -23,7 +23,7 @@ class DataBaseModule {
 
     @Singleton
     @Provides
-    fun provideNewsDao(appDatabase: AppDatabase): DataDAO {
+    fun provideAppDao(appDatabase: AppDatabase): DataDAO {
         return appDatabase.getDao()
     }
 
