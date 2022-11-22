@@ -12,9 +12,11 @@ import androidx.fragment.app.viewModels
 import com.meghani.gtdemo.data.model.Social
 import com.meghani.gtdemo.databinding.FragmentSocialBinding
 import com.meghani.gtdemo.presentation.viewmodel.AppViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SocialFragment() : Fragment() {
-    lateinit var binding: FragmentSocialBinding
+    private lateinit var binding: FragmentSocialBinding
 
     private val viewModel: AppViewModel by viewModels()
     override fun onCreateView(
@@ -26,29 +28,8 @@ class SocialFragment() : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        try {
-            val responseLiveData = viewModel.getChannels()
-            responseLiveData.observe(viewLifecycleOwner) {
-                binding.text.text = it.toString()
-            }
-            /*responseLiveData.observe(viewLifecycleOwner) {
-                it.isNotEmpty()
-            }*/
-        } catch (e: Exception) {
-        }
-    }
-
-    override fun onStart() {
-        super.onStart()
-        try {
-            val responseLiveData = viewModel.getChannels()
-            responseLiveData.observe(viewLifecycleOwner) {
-                binding.text.text = it.toString()
-            }
-            /*responseLiveData.observe(viewLifecycleOwner) {
-                it.isNotEmpty()
-            }*/
-        } catch (e: Exception) {
+        viewModel.channelData.observe(viewLifecycleOwner) {
+            binding.text.text = it.toString()
         }
     }
 }
