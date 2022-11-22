@@ -12,19 +12,19 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/design_default_color_primary_variant"
-            app:title="Animals"
+            android:background="@color/orange"
+            app:title="Gaditek Trial App"
             app:titleTextColor="@color/white" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/design_default_color_primary_variant"
-            app:tabIconTint="#aaa"
+            android:background="@color/orange"
+            app:tabIconTint="@color/orangeLight"
             app:tabIndicatorColor="@color/white"
             app:tabSelectedTextColor="@color/white"
-            app:tabTextColor="#aaa" />
+            app:tabTextColor="@color/orangeLight" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager"

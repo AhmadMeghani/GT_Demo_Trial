@@ -29,9 +29,9 @@ class MainActivity : AppCompatActivity() {
 
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
             if (position == 0)
-                tab.text = "Socials"
-            else
                 tab.text = "Channels"
+            else
+                tab.text = "Socials"
         }.attach()
     }
 }

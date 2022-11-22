@@ -1,0 +1,44 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="data"
+            type="com.meghani.gtdemo.data.model.Social" />
+    </data>
+    <LinearLayout
+        android:id="@+id/parentView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_19sdp"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/_12sdp">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="@dimen/_75sdp"
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            imageUrl="@{data.icon_url}"
+            app:strokeColor="#aaa"
+            app:strokeWidth="@dimen/_1sdp"
+            android:theme="@style/AppImageView" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="@dimen/_79sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:text="@{data.name, default= Name}"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="#101010"
+            android:lines="1" />
+
+    </LinearLayout>
+</layout>

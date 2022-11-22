@@ -16,9 +16,9 @@ class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
 
     override fun createFragment(position: Int): Fragment {
         return if (position == 0) {
-            SocialFragment()
-        } else {
             ChannelFragment()
+        } else {
+            SocialFragment()
         }
     }
 
