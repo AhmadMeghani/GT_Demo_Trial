@@ -3,9 +3,9 @@ package com.meghani.gtdemo
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.viewModels
 import com.google.android.material.tabs.TabLayoutMediator
 import com.meghani.gtdemo.databinding.ActivityMainBinding
+import com.meghani.gtdemo.presentation.adapters.ViewPagerAdapter
 import com.meghani.gtdemo.presentation.viewmodel.AppViewModel
 import dagger.hilt.android.AndroidEntryPoint
 

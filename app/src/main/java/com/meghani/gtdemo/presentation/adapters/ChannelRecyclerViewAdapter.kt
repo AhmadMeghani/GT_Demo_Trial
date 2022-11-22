@@ -1,4 +1,4 @@
-package com.meghani.gtdemo
+package com.meghani.gtdemo.presentation.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

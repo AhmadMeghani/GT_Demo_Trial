@@ -17,19 +17,14 @@ class AppViewModel @Inject constructor(
     private val getSocialsUseCase: GetSocialsUseCase
 ) : ViewModel() {
 
-    var socialData: MutableLiveData<List<Social>> = MutableLiveData<List<Social>>()
-    var channelData: MutableLiveData<List<Channel>> = MutableLiveData<List<Channel>>()
-
     fun getSocials() = liveData {
         getSocialsUseCase.execute().collect{
-            socialData.postValue(it)
             emit(it)
         }
     }
 
     fun getChannels() = liveData {
         getChannelsUseCase.execute().collect{
-            channelData.postValue(it)
             emit(it)
         }
     }

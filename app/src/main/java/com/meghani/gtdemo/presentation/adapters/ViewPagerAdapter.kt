@@ -1,9 +1,11 @@
-package com.meghani.gtdemo
+package com.meghani.gtdemo.presentation.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.meghani.gtdemo.presentation.fragments.ChannelFragment
+import com.meghani.gtdemo.presentation.fragments.SocialFragment
 
 private const val NUM_TABS = 2
 
