@@ -1,0 +1,24 @@
+{
+  "header":{
+    "code":1,
+    "message":"Success"
+  },
+  "body":{
+    "channels":[
+      {
+        "name":"Netflix",
+        "url":"https://www.netflix.com/",
+        "icon_url":"https://d2mm8ysfr8n9au.cloudfront.net/channel-icons/iconnetflix.png",
+        "package_name_android":"com.netflix.mediaclient"
+      }
+    ],
+    "socials":[
+      {
+        "name":"Facebook",
+        "url":"https://www.facebook.com/",
+        "icon_url":"https://d2mm8ysfr8n9au.cloudfront.net/channel-icons/iconfacebook.png",
+        "package_name_android":"com.facebook.katana"
+      }
+    ]
+  }
+}
